@@ -12,7 +12,7 @@ node {
         sh 'mvn test'
       }
       
-      stage('Deliver') 
+      stage('Deliver') {
         sh './jenkins/scripts/deliver.sh'
       }
     }
