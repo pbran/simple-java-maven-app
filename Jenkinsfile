@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 
 node {
-    docker.image('maven:3-alpine').withRun('-v /root/.m2:/root/.m2').inside {
+    docker.image('maven:3-alpine').withRun(" -v /root/.m2:/root/.m2").inside {
             
       stage('Build') {
         checkout scm
